@@ -6,12 +6,10 @@ public class SumAve2 {
 	//数値を計算する為の処理
 	public static void main(String[] arg){
 
-		// xはint型の変数
-		int x;
-		// yはint型の変数
-		int y;
-		// zはint型の変数
-		int z;
+		int x;		// xはint型の変数
+		int y;		// yはint型の変数
+		int z;		// zはint型の変数
+		
 
 		//　xに63を代入
 		x = 63;
