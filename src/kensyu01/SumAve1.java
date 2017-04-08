@@ -6,22 +6,18 @@ public class SumAve1 {
 	//数値を計算する為の処理
 	public static void main(String[] arg){
 		
-		// xはint型の変数
-		int x;
-		// yはint型の変数
-		int y;
-		// zはint型の変数
-		int z;
+		int x;		// xはint型の変数
+		int y;		// yはint型の変数
 		
+		/* 
+		 * 少数部をもつ値でint型の変数を初期化しているため
+		 * エラーが発生している 
+		 */
 		//　xに63を代入
-		x = 63;
+		x = 63.01;
 		//　yに18を代入
-		y = 18;
-		// zに34を代入
-		z = 34;
+		y = 18.02;
 		
-		
-		//z
 		// xの値を出力する処理
 		System.out.println("xの値は" + x + "です。");
 		// yの値を出力する処理
@@ -30,5 +26,6 @@ public class SumAve1 {
 		System.out.println("合計は" + (x + y) + "です。");
 		// xとyの値の平均を表示する処理
 		System.out.println("平均は" + (x + y) / 2 + "です。");
+		
 	}
 }
