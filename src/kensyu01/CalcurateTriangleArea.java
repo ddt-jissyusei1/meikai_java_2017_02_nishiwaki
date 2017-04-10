@@ -24,6 +24,9 @@ public class CalcurateTriangleArea {
 		System.out.print("高さ : ");
 		// 入力した値を変数yに保持する為の処理
 		float y = stdIn.nextFloat();
+		
+		// 入力用のストリームを閉じる
+		stdIn.close();
 
 		// 三角形の面積を計算しを保持する為の処理
 		float result = x * y / 2;
