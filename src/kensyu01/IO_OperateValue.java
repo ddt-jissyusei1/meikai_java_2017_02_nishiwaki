@@ -6,7 +6,7 @@ import java.util.Scanner;
 // 入力した値から演算結果を表示する為のクラス
 public class IO_OperateValue {
 
-	// 入力した値を変数xに保持して報告する為の処理
+	// 入力した値から演算結果を表示する為の処理
 	public static void main(String[] arg){
 
 		// 入力した値を読み込む為のオブジェクトを作成
@@ -16,6 +16,8 @@ public class IO_OperateValue {
 		System.out.print("整数値 : ");
 		// 変数xに入力した値を保持する
 		int x = stdIn.nextInt();
+		// 入力用ストリームを閉じる
+		stdIn.close();
 
 		// 入力した値に10を足した値を保持
 		int result_of_addition = x + 10;
