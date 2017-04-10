@@ -21,6 +21,9 @@ public class IO_SumAve {
 		System.out.print("yの値 : ");
 		// 入力した値を変数yに保持する為の処理
 		float y = stdIn.nextFloat();
+		
+		// 入力用ストリームを閉じる
+		stdIn.close();
 
 		// 変数x,yの合計値を保持する為の処理
 		float sum = x + y;
