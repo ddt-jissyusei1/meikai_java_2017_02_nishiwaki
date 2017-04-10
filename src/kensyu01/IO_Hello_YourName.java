@@ -22,6 +22,7 @@ public class IO_Hello_YourName {
 		// 入力された文字列を変数に保持する
 		String fastName = stdIn.nextLine();
 		
+		// 入力用ストリームを閉じる
 		stdIn.close();
 		
 		// 挨拶のメッセージを出力する
