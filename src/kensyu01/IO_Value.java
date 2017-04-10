@@ -16,6 +16,8 @@ public class IO_Value {
 		System.out.print("整数値 : ");
 		// 変数xに入力した値を保持する
 		int x = stdIn.nextInt();
+		// 入力用ストリームを閉じる
+		stdIn.close();
 		
 		// 入力された値を報告するメッセージを出力する処理
 		System.out.println(x + "と入力しましたね");
