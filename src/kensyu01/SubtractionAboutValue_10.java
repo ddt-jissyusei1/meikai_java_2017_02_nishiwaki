@@ -31,7 +31,7 @@ public class SubtractionAboutValue_10 {
 			
 			// 整数値bの入力を促すメッセージを出力
 			System.out.print("整数値bを入力してください。");
-			// 入力された値aが整数かどうかの判定結果を保持する
+			// 入力された値bが整数かどうかの判定結果を保持する
 			isIntB = stdIn.hasNextInt();
 			
 			// bの値が整数だった場合の処理
@@ -52,9 +52,6 @@ public class SubtractionAboutValue_10 {
 					int result = a - b;
 					// 計算結果を正の値に変換する
 					result = result < 0 ? -result : result;
-					
-					// debug
-					System.out.println(result);
 					
 					// 計算結果が「11以上か10未満か」をメッセージに出力する
 					System.out.println("それらの差は" + ( result > 10  ? "11以上です。" : "10以下です。" ) );
