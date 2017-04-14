@@ -44,8 +44,18 @@ public class MalfunctionScanner {
 		// 整数値bの入力を促すメッセージを出力
 		System.out.print("整数値bを入力してください。");
 		// 入力された値aが整数かどうかの判定結果を保持する
-		isIntB = stdIn.hasNextInt();
-			
+		isIntB = stdIn.hasNextInt();	// 入力をしていないのにfalseで初期化されている
+		
+		/*
+		 * 入力をする前にBにfalseが入ってしまい
+		 * 以下処理に飛び
+		 * エラー時の処理を行なって終了してしまっているように見える
+		 * 
+		 * aの入力がfalseの時には stdIn.hasNextInt に falseの状態が残ってしまうのだろうか？
+		 * 正しく整数を入力すると期待通りに動いているので
+		 * 入力を受け付ける処理が背後でどのように動いているのかわからない
+		 * 
+		 */
 		// bの値が整数だった場合の処理
 		if( isIntB ){
 				// 入力されたbの値を保持する
