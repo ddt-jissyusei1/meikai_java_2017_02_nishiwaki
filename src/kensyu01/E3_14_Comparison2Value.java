@@ -4,7 +4,7 @@ package kensyu01;
 import java.util.Scanner;
 
 // 読み込んだ2つの整数値を比較し、大きい方の値と、小さい方の値を出力する為のクラス
-public class Comparison2Value {
+public class E3_14_Comparison2Value {
 
 	// 2つの整数値の入力を読み込み、大きい方の値と、小さい方の値を出力する為の処理
 	public static void main(String[] arg){
@@ -68,10 +68,11 @@ public class Comparison2Value {
 							b = t;
 						}
 						
-						// 大きい方の値を出力する
-						System.out.println("大きい方の値は : " + a + "です。");
 						// 小さい方の値を出力する
 						System.out.println("小さい方の値は : " + b + "です。");
+						// 大きい方の値を出力する
+						System.out.println("大きい方の値は : " + a + "です。");
+						
 						
 					}
 				}
