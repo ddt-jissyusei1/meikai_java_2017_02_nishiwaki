@@ -14,30 +14,26 @@ public class E3_2_IO_JadgeDivisor {
 
 		// 整数Aの入力を促すメッセージを出力する為の処理を行う
 		System.out.print("整数A : ");
-		// 入力された値を変数Aに保持する
-		int A = stdIn.nextInt();
+		// 入力された値を変数inputValueAに保持する
+		int inputValueA = stdIn.nextInt();
 
 		// 整数Bの入力を促すメッセージを出力する為の処理を行う
 		System.out.print("整数B : ");
-		// 入力された値を変数Bに保持する
-		int B = stdIn.nextInt();
-		
-		// 入力用ストリームを閉じる
-		stdIn.close();
+		// 入力された値を変数inputValueBに保持する
+		int inputValueB = stdIn.nextInt();
 
-		// 変数Bの値が変数Aの値の約数になっているかの判定結果を格納する為の変数
-		boolean isDivisor = false;
-		// 変数Bの値が変数Aの値の約数になっているかを判定する為の処理
-		if( A % B == 0 ) {
-			isDivisor = true;
-		}
-
-		// isDivisorの値を元に BがAの約数かどうか を出力する為の処理
-		if(isDivisor){
+		// inputValueAの値がinputValueBの値で割り切れる(約数)の場合の処理を行う
+		if( inputValueA % inputValueB == 0 ) {
+			// inputValueBがinputValueAの約数であることをメッセージで出力する
 			System.out.println("BはAの約数です。");
+		// inputValueBがinputValueAの約数でない場合
 		} else {
+			// inputValueBがinputValueAの約数でないことをメッセージで出力する
 			System.out.println("BはAの約数ではありません。");
 		}
+				
+		// 入力用ストリームを閉じる
+		stdIn.close();
 
 	}
 }
