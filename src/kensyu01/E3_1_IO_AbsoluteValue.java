@@ -1,18 +1,18 @@
 package kensyu01;
 
-//入力した値を読み込む為の機能の読み込み
+//入力した値を読み込む為の機能の読み込みを行う
 import java.util.Scanner;
 
 // 入力した値の絶対値を出力するクラス
 public class E3_1_IO_AbsoluteValue {
 
-	// 入力した値を絶対値で出力する為の処理
+	// 入力した値を絶対値で出力する為の処理を行う
 	public static void main (String[] arg){
 		
-		// 入力した値を読み込む為のオブジェクトを作成
+		// 入力した値を読み込む為のオブジェクトを作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// 整数値の入力を促すメッセージを出力する為の処理
+		// 整数値の入力を促すメッセージを出力する為の処理する
 		System.out.print("整数値 : ");
 		// 入力された値を変数に保持する
 		int n = stdIn.nextInt();

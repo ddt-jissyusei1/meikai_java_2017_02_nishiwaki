@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 入力された値を取得する為の機能の読み込み
+// 入力された値を取得する為の機能の読み込みを行う
 import java.util.Scanner;
 
 // 入力された2つの整数値の差を計算して出力するクラス
 public class E3_10_SubtractionValue {
 
-	// 入力された2つの整数値の差を計算して出力するクラス
+	// 入力された2つの整数値の差を計算して出力する処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成を行う
 		Scanner stdIn = new Scanner(System.in);
 		
 		int a; //入力された値aを保持する為の変数

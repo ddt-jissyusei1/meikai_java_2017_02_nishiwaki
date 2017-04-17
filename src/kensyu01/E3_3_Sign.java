@@ -1,18 +1,18 @@
 package kensyu01;
 
-//入力した値を読み込む為の機能の読み込み
+//入力した値を読み込む為の機能の読み込みを行う
 import java.util.Scanner;
 
 //読み込んだ整数値の符号（正/負/０）を判定して表示するクラス
 public class E3_3_Sign {
 
-	// 読み込んだ整数値の符号（正/負/０）を判定して表示する処理
+	// 読み込んだ整数値の符号（正/負/０）を判定して表示する処理を行う
 	public static void main (String[] arg) {
 		
-		// 入力した値を読み込む為のオブジェクトを作成
+		// 入力した値を読み込む為のオブジェクトを作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// 整数値の入力を促すメッセージを出力する為の処理
+		// 整数値の入力を促すメッセージを出力する為の処理を行う
 		System.out.print("整数値 : ");
 		// 変数nに入力された値を保持する
 		int n = stdIn.nextInt();

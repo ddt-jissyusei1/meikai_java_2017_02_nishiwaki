@@ -1,18 +1,18 @@
 package kensyu01;
 
-// 入力された値を取得する為の機能を読み込み
+// 入力された値を取得する為の機能を読み込みを行う
 import java.util.Scanner;
 
 //  入力された値を3で割った結果をメッセージで出力するクラス
 public class E3_7_IO_ResultDevidedOf3 {
 
-	// 入力された値を3で割った結果をメッセージで出力する処理
+	// 入力された値を3で割った結果をメッセージで出力する処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// 正の整数の入力を促すメッセージを出力
+		// 正の整数の入力を促すメッセージを出力する
 		System.out.print("正の整数を入力してください : ");
 		// 入力された値を変数に保持する
 		int n = stdIn.nextInt();

@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 乱数を生成する為の機能の読み込み
+// 乱数を生成する為の機能の読み込みを行う
 import java.util.Random;
 
 // double型の乱数を生成するクラス
 public class E2_9_OutRandDoubleValue {
 
-	// double型の乱数を生成する処理
+	// double型の乱数を生成する処理を行う
 	public static void main(String[] arg){
 		
-		// 乱数を生成するオブジェクトの作成
+		// 乱数を生成するオブジェクトの作成を行う
 		Random rand = new Random();
 		
 		// 0.0 以上 1.0未満のランダム実数を生成し変数に保持する 

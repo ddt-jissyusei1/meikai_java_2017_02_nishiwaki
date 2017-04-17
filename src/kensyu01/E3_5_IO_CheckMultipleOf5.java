@@ -6,13 +6,13 @@ import java.util.Scanner;
 // 入力された正の整数値が5の倍数であるかどうか判定し、結果を出力するクラス
 public class E3_5_IO_CheckMultipleOf5 {
 	
-	// 入力された正の整数値が5の倍数であるかどうか判定し、結果を出力する処理
+	// 入力された正の整数値が5の倍数であるかどうか判定し、結果を出力する処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// 正の整数値の入力を促すメッセージの出力
+		// 正の整数値の入力を促すメッセージを出力する
 		System.out.print("正の整数値を入力してください : ");
 		// 入力された値を変数に保持する
 		int n = stdIn.nextInt();

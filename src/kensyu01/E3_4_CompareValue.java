@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 入力した値を取得する機能の読み込み
+// 入力した値を取得する機能の読み込みを行う
 import java.util.Scanner;
 
 // 入力した値の大小を比較し結果を表示する為のクラス
 public class E3_4_CompareValue {
 
-	// 入力した値を比較して結果を表示する為の処理
+	// 入力した値を比較して結果を表示する為の処理を行う
 	public static void main(String[] arg){
 		
-		// 入力した値を取得するオブジェクトを作成
+		// 入力した値を取得するオブジェクトを作成する
 		Scanner stdIn = new Scanner(System.in);
 		
 		// a の値の入力を促すメッセージを出力

@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 入力された値を取得する為の機能の読み込み
+// 入力された値を取得する為の機能の読み込みを行う
 import java.util.Scanner;
 
 // 入力された2つの実数を比較して大きい方の値を出力するクラス
 public class E3_9_ComparisonValue {
 	
-	// 入力された2つの実数を比較して大きい方の値を出力する処理
+	// 入力された2つの実数を比較して大きい方の値を出力する処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成する
 		Scanner stdIn = new Scanner(System.in);
 		
 		// 実数値の入力を促すメッセージを出力

@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 入力された値を取得する為の機能の読み込み
+// 入力された値を取得する為の機能の読み込みを行う
 import java.util.Scanner;
 
 // 読み込んだ3つの整数値の最小値を表示する為のクラス
 public class E3_12_MinValue {
 
-	// 3つの整数値の入力を読み込み、最小値を出力する為の処理
+	// 3つの整数値の入力を読み込み、最小値を出力する為の処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成を行う
 		Scanner stdIn = new Scanner(System.in);
 		
 		int a; //入力された値aを保持する為の変数

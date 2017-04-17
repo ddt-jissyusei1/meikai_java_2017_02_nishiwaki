@@ -1,15 +1,15 @@
 package kensyu01;
 
-// 乱数を生成する為の機能の読み込み
+// 乱数を生成する為の機能の読み込みを行う
 import java.util.Random;
 
 // 乱数を表示するクラス
 public class E2_7_OutRandValue {
 
-	// 一桁の正の整数、一桁の負の整数、二桁の正の整数を出力する処理
+	// 一桁の正の整数、一桁の負の整数、二桁の正の整数を出力する処理を行う
 	public static void main(String[] args){
 		
-		// 乱数を生成するオブジェクトを作成
+		// 乱数を生成するオブジェクトを作成する
 		Random rand = new Random();
 		
 		// 一桁の正の整数を変数に保持する

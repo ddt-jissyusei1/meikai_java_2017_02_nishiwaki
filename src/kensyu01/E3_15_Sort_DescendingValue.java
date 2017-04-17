@@ -6,10 +6,10 @@ import java.util.Scanner;
 // 読み込んだ2つの整数値を比較し、大きい方の値と、小さい方の値を出力する為のクラス
 public class E3_15_Sort_DescendingValue {
 
-	// 2つの整数値の入力を読み込み、大きい方の値と、小さい方の値を出力する為の処理
+	// 2つの整数値の入力を読み込み、大きい方の値と、小さい方の値を出力する為の処理を行う
 	public static void main(String[] arg){
 		
-		// 入力された値を取得する為のオブジェクトの作成
+		// 入力された値を取得する為のオブジェクトの作成する
 		Scanner stdIn = new Scanner(System.in);
 		
 		int a; //入力された値aを保持する為の変数
