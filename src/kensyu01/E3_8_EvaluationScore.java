@@ -15,7 +15,7 @@ public class E3_8_EvaluationScore {
 		// 0 ~ 100 の点数入力を促すメッセージを出力する
 		System.out.println("0 ~ 100 の点数を入力してください");
 		
-		int score; // 入力された値を格納する変数
+		int score = 0; // 入力された値を格納する変数
 
 		// 整数が入力されている場合の処理を行う
 		if( stdIn.hasNextInt()){
