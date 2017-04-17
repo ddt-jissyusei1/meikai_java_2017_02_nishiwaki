@@ -16,26 +16,11 @@ public class E3_8_EvaluationScore {
 		System.out.println("0 ~ 100 の点数を入力してください");
 		
 		int score; // 入力された値を格納する変数
-		boolean isInt; // 入力された値が整数かどうかの判定結果を格納する変数
-		
-		// 正の整数が入力されている場合の処理
+
+		// 整数が入力されている場合の処理を行う
 		if( stdIn.hasNextInt()){
-			// 正の整数であることを示すフラグを設定
-			isInt = true;
-			// 入力された値を変数に保持
+			// 入力された値を変数に保持する
 			score = stdIn.nextInt();
-		// 正の整数でない値が入力されている場合の処理
-		} else {
-			// 正の整数でないことを示すフラグの設定
-			isInt = false;
-			score = 0;
-		}
-		
-		// 入力用ストリームを閉じる
-		stdIn.close();
-		
-		// 整数が入力されている場合
-		if ( isInt ){
 			
 			// score が 0 ~ 59 だった場合の処理を行う
 			if ( score >= 0 && score <= 59 ){
@@ -61,8 +46,14 @@ public class E3_8_EvaluationScore {
 
 		// 整数でない値が入力されている場合の処理を行う
 		} else {
+
+			// 入力された値が不正であることをメッセージで出力する
 			System.out.println("入力された値が不正です。");
+			
 		}
+		
+		// 入力用ストリームを閉じる
+		stdIn.close();
 		
 	}
 }
