@@ -1,5 +1,6 @@
 package kensyu01;
 
+// 入力した値を取得する為の機能の読み込み
 import java.util.Scanner;
 
 // 三角形の面積を計算するクラス
