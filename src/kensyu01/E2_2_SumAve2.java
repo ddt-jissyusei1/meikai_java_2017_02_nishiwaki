@@ -6,17 +6,12 @@ public class E2_2_SumAve2 {
 	//数値を計算する為の処理を行う
 	public static void main(String[] arg){
 
-		int x;		// xはint型の変数
-		int y;		// yはint型の変数
-		int z;		// zはint型の変数
-		
-
-		//　xに63を代入
-		x = 63;
-		//　yに18を代入
-		y = 18;
-		// zに34を代入
-		z = 34;
+		//　変数xを63で初期化する
+		int x = 63;
+		//　変数yを18で初期化する
+		int y = 18;
+		// 変数zを34初期化する
+		int z = 34;
 
 		//変数sumに x, y, z の合計を保持する
 		int sum = x + y + z;
