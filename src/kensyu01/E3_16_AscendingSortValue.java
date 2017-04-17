@@ -12,121 +12,99 @@ public class E3_16_AscendingSortValue {
 		// 入力された値を取得する為のオブジェクトを作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		int a; //入力された値aを保持する為の変数
-		int b; //入力された値bを保持する為の変数
-		int c; //入力された値cを保持する為の変数
-		boolean isIntA; // 入力された値aが整数かどうかの判定結果を保持する変数
-		boolean isIntB; // 入力された値bが整数かどうかの判定結果を保持する変数
-		boolean isIntC; // 入力された値cが整数かどうかの判定結果を保持する変数
-		boolean isInt; // 入力された両方の値が整数かどうかの判定結果を保持する変数
+		int firstValue; //入力された値1を保持する為の変数
+		int secondValue; //入力された値2を保持する為の変数
+		int thirdValue; //入力された値cを保持する為の変数
+
+		// 整数値1の入力を促すメッセージを出力する
+		System.out.print("整数値1を入力してください。");
 		
-		// 整数値aの入力を促すメッセージを出力
-		System.out.print("整数値aを入力してください。");
-		// 入力された値aが整数かどうかの判定結果を保持する
-		isIntA = stdIn.hasNextInt();
-		
-		// aの値が整数だった場合の処理
-		if ( isIntA ){
+		// 入力された値が整数だった場合の処理を行う
+		if ( stdIn.hasNextInt() ){
 			
-			// 入力されたaの値を保持する
-			a = stdIn.nextInt();
+			// 入力されたfirstValueの値を保持する
+			firstValue = stdIn.nextInt();
 			
-			// 整数値bの入力を促すメッセージを出力
-			System.out.print("整数値bを入力してください。");
-			// 入力された値bが整数かどうかの判定結果を保持する
-			isIntB = stdIn.hasNextInt();
+			// 整数値2の入力を促すメッセージを出力する
+			System.out.print("整数値2を入力してください。");
 			
-			
-			if ( isIntB ){
+			// 入力された値が整数だった場合の処理を行う
+			if ( stdIn.hasNextInt() ){
 				
-				// 入力されたbの値を保持する
-				b = stdIn.nextInt();
+				// 入力されたsecondValueの値を保持する
+				secondValue = stdIn.nextInt();
 				
-				// 整数値cの入力を促すメッセージを出力
+				// 整数値cの入力を促すメッセージを出力する
 				System.out.print("整数値cを入力してください。");
-				// 入力された値cが整数かどうかの判定結果を保持する
-				isIntC = stdIn.hasNextInt();
 			
-				// cの値が整数だった場合の処理
-				if( isIntC ){
+				// 入力された値が整数だった場合の処理を行う
+				if( stdIn.hasNextInt() ){
 				
-					// 入力されたcの値を保持する
-					c = stdIn.nextInt();
-						
-					// 2つの入力が正しいことをフラグに設定する
-					isInt = true;
-				
-					// 2つの入力が正しかった場合の処理
-					if ( isInt ){
-					
-						// 入力用のストリームを閉じる
-						stdIn.close();
-						
-						// a,bを比較して aがbより小さければ値を入れ替える
-						if ( a < b ) {
-							
-							// aの値を変数tに保持する
-							int t = a;
-							// aの値をbの値に変更する
-							a = b;
-							// bの値をtに保持したaの値に変更する
-							b = t;
-							
-						}
-						
-						// a,cを比較して aがbより小さければ値を入れ替える
-						if ( a < c ) {
-							
-							// aの値を変数tに保持する
-							int t = a;
-							// aの値をcの値に変更する
-							a = c;
-							// cの値を変数tに保持したaの値に変更する
-							c = t;
-						}
-						
-						// aには最大値が入っているはずなので b,cを比較して bがcより小さければ値を入れ替える
-						if( b < c ) {
-							
-							// bの値を変数tに保持する
-							int t = b;
-							// bの値をcの値に変更する
-							b = c;
-							// cの値を変数tに保持したbの値に変更する
-							c = t;
-							
-						}
-						
-						// aの値を出力する
-						System.out.println(a);
-						// bの値を出力する
-						System.out.println(b);
-						// cの値を出力する
-						System.out.println(c);
+					// 入力された値を保持する
+					thirdValue = stdIn.nextInt();
+
+					// firstValue,secondValueを比較して firstValueがsecondValueより大きければ値を入れ替える
+					if ( firstValue > secondValue ) {
+
+						// firstValueの値を変数tempに保持する
+						int temp = firstValue;
+						// firstValueの値をsecondValueの値に変更する
+						firstValue = secondValue;
+						// secondValueの値をtに保持したfirstValueの値に変更する
+						secondValue = temp;
 
 					}
-						
-							
+
+					// firstValue,thirdValueを比較して firstValueがsecondValueより大きければ値を入れ替える
+					if ( firstValue > thirdValue ) {
+
+						// firstValueの値を変数tempに保持する
+						int temp = firstValue;
+						// firstValueの値をcの値に変更する
+						firstValue = thirdValue;
+						// thirdValueの値を変数tempに保持したfirstValueの値に変更する
+						thirdValue = temp;
+					}
+
+					// firstValueには最小値が入っているはずなので secondValue,thirdValueを比較して secondValueがthirdValueより大きければ値を入れ替える
+					if( secondValue > thirdValue ) {
+
+						// secondValueの値を変数tempに保持する
+						int temp = secondValue;
+						// secondValueの値をthirdValueの値に変更する
+						secondValue = thirdValue;
+						// thirdValueの値を変数tempに保持したsecondValueの値に変更する
+						thirdValue = temp;
+
+					}
+
+					// firstValueの値を出力する
+					System.out.println(firstValue);
+					// secondValueの値を出力する
+					System.out.println(secondValue);
+					// thirdValueの値を出力する
+					System.out.println(thirdValue);
+
+				// thirdValueの値が整数でない場合の処理を行う
 				} else {
-					// 入力用のストリームを閉じる
-					stdIn.close();
 					// 入力が不正であることをメッセージで出力する
 					System.out.println("入力された値が不正です。");
 				}
-					
+			
+			// secondValueの値が整数でない場合の処理を行う
 			} else {
-				// 入力用のストリームを閉じる
-				stdIn.close();
 				// 入力が不正であることをメッセージで出力する
 				System.out.println("入力された値が不正です。");
 			}
-				
+		
+		// firstValueの値が整数でない場合の処理を行う
 		} else {
-			// 入力用のストリームを閉じる
-			stdIn.close();
 			// 入力が不正であることをメッセージで出力する
 			System.out.println("入力された値が不正です。");
 		}
+		
+		// 入力用のストリームを閉じる
+		stdIn.close();
 		
 	}
 }
