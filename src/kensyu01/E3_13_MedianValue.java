@@ -1,3 +1,4 @@
+
 package kensyu01;
 
 // 入力された値を取得する為の機能の読み込みを行う
@@ -12,128 +13,100 @@ public class E3_13_MedianValue {
 		// 入力された値を取得する為のオブジェクトの作成を行う
 		Scanner stdIn = new Scanner(System.in);
 		
-		int a; //入力された値aを保持する為の変数
-		int b; //入力された値bを保持する為の変数
-		int c; //入力された値cを保持する為の変数
-		boolean isIntA; // 入力された値Aが整数かどうかの判定結果を保持する変数
-		boolean isIntB; // 入力された値Bが整数かどうかの判定結果を保持する変数
-		boolean isIntC; // 入力された値Cが整数かどうかの判定結果を保持する変数
-		boolean isInt; // 入力された両方の値が整数かどうかの判定結果を保持する変数
+		int firstValue; //入力された値1を保持する為の変数
+		int secondValue; //入力された値2を保持する為の変数
+		int thirdValue; //入力された値3を保持する為の変数
+
+		// 整数値1の入力を促すメッセージを出力を行う
+		System.out.print("整数値1を入力してください。");
 		
-		// 整数値aの入力を促すメッセージを出力
-		System.out.print("整数値aを入力してください。");
-		// 入力された値aが整数かどうかの判定結果を保持する
-		isIntA = stdIn.hasNextInt();
-		
-		// aの値が整数だった場合の処理
-		if ( isIntA ){
+		// 入力された値が整数だった場合の処理を行う
+		if ( stdIn.hasNextInt() ){
 			
-			// 入力されたaの値を保持する
-			a = stdIn.nextInt();
+			// 入力された値を保持する
+			firstValue = stdIn.nextInt();
 			
-			// 整数値bの入力を促すメッセージを出力
-			System.out.print("整数値bを入力してください。");
-			// 入力された値bが整数かどうかの判定結果を保持する
-			isIntB = stdIn.hasNextInt();
+			// 整数値2の入力を促すメッセージを出力する
+			System.out.print("整数値2を入力してください。");
 			
-			// Bの値が整数だった場合の処理
-			if( isIntB ){
+			// 入力された値が整数だった場合の処理を行う
+			if( stdIn.hasNextInt() ){
 				
-				// 入力されたbの値を保持する
-				b = stdIn.nextInt();
+				// 入力された整数値Bの値を保持する
+				secondValue = stdIn.nextInt();
 				
-				// 整数値Cの入力を促すメッセージを出力
-				System.out.print("整数値cを入力してください。");
-				// 入力された値cが整数かどうかの判定結果を保持する
-				isIntC = stdIn.hasNextInt();
+				// 整数値3の入力を促すメッセージを出力する
+				System.out.print("整数値3を入力してください。");
 				
-				
-				// Cの値が整数だった場合の処理
-				if( isIntC ){
+				// 入力された値が整数だった場合の処理を行う
+				if( stdIn.hasNextInt() ){
 					
-					// 入力されたCの値を保持する
-					c = stdIn.nextInt();
-					// 3つの入力が正しいことをフラグに設定する
-					isInt = true;
-					
-					// 3つの入力が正しかった場合の処理
-					if ( isInt ){
+					// 入力された整数値3の値を保持する
+					thirdValue = stdIn.nextInt();
+
+					// firstValueがsecondValueより大きかったらそれぞれの値を入れ替える
+					if ( firstValue > secondValue ) {
 						
-						// 入力用のストリームを閉じる
-						stdIn.close();
+						// 変数tempにfirstValueの値を一時的に保持する
+						int temp = firstValue;
 						
-						// 最大値取得のためにmaxをaの値で期化する
-						int max = a;
-						// maxよりbの値が大きければその値で置き換える
-						max = ( b > max ) ? b : max;
-						// maxよりcの値が大きければその値で置き換える
-						max = ( c > max ) ? c : max;
+						// firstValueの値をsecondValueの値に変更する
+						firstValue = secondValue;
 						
-						// 最小値取得のためにminをあの値で初期化する
-						int min = a;
-						// minよりbの値が小さければその値で置き換える
-						min = ( b < min ) ? b : min;
-						// minよりcの値が小さければその値で置き換える
-						min = ( c < min ) ? c : min;
+						// secondValueをtempに保持していたfirstValueの値に変更する
+						secondValue = temp;
 						
-						// a,b,cが同じ(max == min)場合の処理
-						if( max == min ){
-							// 何れも中央値なので a を出力する
-							System.out.println(a);
-						
-						// a,b,cが全てことなる場合の処理
-						} else if (a != b && a != c && b != c ) {
- 
-							// 	a == min の場合 b,cのうち小さい方を中央値として出力する
-							if ( a == min ) System.out.println( b < c ? b : c );
-							
-							// 	b == min の場合 a,cのうち小さい方を中央値として出力する
-							if ( b == min ) System.out.println( a < c ? a : c );
-							
-							// 	c == min の場合 a,bのうち小さい方を中央値として出力する
-							if ( c == min ) System.out.println( a < b ? a : b );
-							
-						// 何れかは同じ値の場合
-						} else {
-						
-							// a,bが同じ場合 aを中央値として出力する
-							if ( a == b ) System.out.println(a);
-							
-							// a,cが同じ場合 aを中央値として出力する
-							if ( a == c ) System.out.println(a);
-							
-							// b,cが同じ場合 bを中央値として出力する
-							if ( b == c ) System.out.println(b);
-							
-						}
-						
-					} else {
-						// 入力用のストリームを閉じる
-						stdIn.close();
-						// 入力が不正であることをメッセージで出力する
-						System.out.println("入力された値が不正です。");
 					}
+					
+					// firstValueの値がthirdValueの値より大きかったらそれぞれの値を入れ替える
+					if ( firstValue > thirdValue ) {
 						
+						// 変数tempにfirstValuleの値を一時的に保持する
+						int temp = firstValue;
+						
+						// firstValueの値をthirdValueの値に変更する
+						firstValue = thirdValue;
+						
+						// thirdValueをtempに保持していたfirstValueの値に変更する
+						thirdValue = temp;
+					}
+					
+					// secondValueの値がthirdValueの値より大きかったらそれぞれの値を変更する
+					if ( secondValue > thirdValue ) {
+						
+						// 変数tempにsecondValueの値を一時的に保持する
+						int temp = secondValue;
+						
+						// secondValueの値をthirdValueの値に変更する
+						secondValue = thirdValue;
+						
+						// thirdValueの値をtempに保持していたsecondValueの値に変更する
+						thirdValue = temp;
+					}
+					
+					// 中央値を出力する
+					System.out.println(secondValue);
+				
+				// thirdValueの値が整数でなかった場合の処理を行う 
 				} else {
-					// 入力用のストリームを閉じる
-					stdIn.close();
 					// 入力が不正であることをメッセージで出力する
 					System.out.println("入力された値が不正です。");
 				}
 				
+			// secondValueの値が整数でなかった場合の処理を行う
 			} else {
-				// 入力用のストリームを閉じる
-				stdIn.close();
 				// 入力が不正であることをメッセージで出力する
 				System.out.println("入力された値が不正です。");
 			}
 				
+		// firstValueの値が整数でなかった場合の処理を行う
 		} else {
-			// 入力用のストリームを閉じる
-			stdIn.close();
 			// 入力が不正であることをメッセージで出力する
 			System.out.println("入力された値が不正です。");
 		}
+
+		// 入力用のストリームを閉じる
+		stdIn.close();
 		
 	}
 }
