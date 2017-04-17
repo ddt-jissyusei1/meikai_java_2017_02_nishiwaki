@@ -15,20 +15,20 @@ public class E3_5_IO_CheckMultipleOf5 {
 		// 正の整数値の入力を促すメッセージを出力する
 		System.out.print("正の整数値を入力してください : ");
 		// 入力された値を変数に保持する
-		int n = stdIn.nextInt();
+		int inputNumber = stdIn.nextInt();
 		
 		// 入力用のストリームを閉じる
 		stdIn.close();
 		
-		// nの値が正の値でない場合の処理
-		if ( n < 1 ) {
+		// inputNumberの値が正の値でない場合の処理を行う
+		if ( inputNumber < 1 ) {
 			// 正の値ではないことをメッセージで出力する
 			System.out.println("正でない値が入力されました。");
-		// nの値が5で割り切れる場合の処理
-		} else if ( n % 5 == 0 ){
+		// inputNumberの値が5で割り切れる場合の処理を行う
+		} else if ( inputNumber % 5 == 0 ){
 			// 5で割り切れることをメッセージで出力する
 			System.out.println("その値は5で割り切れます。");
-		// nの値が5で割り切れない場合の処理
+		// inputNumberの値が5で割り切れない場合の処理を行う
 		} else {
 			// 5で割り切れないことをメッセージで出力する
 			System.out.println("その値は5で割り切れません。");
