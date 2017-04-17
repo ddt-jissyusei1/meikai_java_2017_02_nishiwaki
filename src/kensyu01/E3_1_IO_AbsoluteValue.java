@@ -15,18 +15,20 @@ public class E3_1_IO_AbsoluteValue {
 		// 整数値の入力を促すメッセージを出力する為の処理する
 		System.out.print("整数値 : ");
 		// 入力された値を変数に保持する
-		int n = stdIn.nextInt();
+		int inputValue = stdIn.nextInt();
 		
 		// 入力用ストリームを閉じる
 		stdIn.close();
 		
-		// 入力された値が0未満の場合 -1 を乗算して絶対値に変換する為の処理
-		if( n < 0 ) {
-			n = n * -1;
+		// 入力された値が0未満の場合 -1 を乗算して絶対値に変換する為の処理を行う
+		if( inputValue < 0 ) {
+			
+			// 正の整数に変換する
+			inputValue *= -1;
 		}
 		
-		// 変数nを出力する為の処理
-		System.out.println("その絶対値は" + n + "です。");
+		// 変数inputValueを出力する為の処理を行う
+		System.out.println("その絶対値は" + inputValue + "です。");
 		
 	}
 		
