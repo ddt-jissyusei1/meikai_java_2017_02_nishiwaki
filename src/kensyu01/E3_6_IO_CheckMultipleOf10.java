@@ -14,22 +14,22 @@ public class E3_6_IO_CheckMultipleOf10 {
 		// 正の整数の入力を促すメッセージを出力する
 		System.out.print("正の整数値を入力してください。");
 		// 入力された値を変数に保持する
-		int n = stdIn.nextInt();
+		int inputNumber = stdIn.nextInt();
 		
 		// 入力用のストリームを閉じる
 		stdIn.close();
 		
-		// nが正の整数でない場合の処理
-		if ( n < 1 ) {			
-			// nが正の整数でないことをメッセージで出力する
+		// inputNumberが正の整数でない場合の処理を行う
+		if ( inputNumber < 1 ) {			
+			// inputNumberが正の整数でないことをメッセージで出力する
 			System.out.println("正でない値が入力されました。");
-		// nが10で割り切れる場合の処理
-		} else if ( n % 10 == 0 ) {
-			// nが10の倍数であることをメッセージで出力
+		// inputNumberが10で割り切れる場合の処理を行う
+		} else if ( inputNumber % 10 == 0 ) {
+			// inputNumberが10の倍数であることをメッセージで出力する
 			System.out.println("その値は10の倍数です。");
-		// nが10で割り切れない場合の処理
+		// inputNumberが10で割り切れない場合の処理を行う
 		} else {
-			// nが10の倍数でないことをメッセージで出力する
+			// inputNumberが10の倍数でないことをメッセージで出力する
 			System.out.println("その値は10の倍数ではありません。");
 		}
 		
