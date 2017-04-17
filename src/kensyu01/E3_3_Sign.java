@@ -14,26 +14,29 @@ public class E3_3_Sign {
 		
 		// 整数値の入力を促すメッセージを出力する為の処理を行う
 		System.out.print("整数値 : ");
-		// 変数nに入力された値を保持する
-		int n = stdIn.nextInt();
+		// 変数inputNumberに入力された値を保持する
+		int inputNumber = stdIn.nextInt();
 		
 		// 入力用ストリームを閉じる
 		stdIn.close();
 		
-		// nの値の符号（正/負/０）を判定して出力を出し分ける為の処理
-		if( n > 0 )
-			// nが正の整数であることを出力する為の処理
+		// inputNumberの値が正の値である場合の処理を行う
+		if( inputNumber > 0 ) {
+			// inputNumberが正の整数であることを出力する為の処理を行う
 			System.out.println("その整数は正です。");
-		else if ( n < 0 )
-			// nが負の整数であることを出力する為の処理
+		// inputNumberの値が負の値である場合の処理を行う
+		} else if ( inputNumber < 0 ) {
+			// inputNumberが負の整数であることを出力する為の処理を行う
 			System.out.println("その整数は負です。");
-		else
-			// nが0であることを出力する為の処理
+		// それ以外の場合の処理を行う
+		} else {
+			// inputNumberが0であることを出力する為の処理を行う
 			System.out.println("その整数は0です。");
+		}
 		
 		/*
 		 * else だけの場合は 0以下でも0以上でもない int型の数値が判定される = 0だけが判定される
-		 * else if ( n == 0 ) の場合は 0だけが判定される
+		 * else if ( inputNumber == 0 ) の場合は 0だけが判定される
 		 * よって結果は同じになる
 		 */
 
