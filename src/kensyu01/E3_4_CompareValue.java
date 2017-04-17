@@ -12,27 +12,33 @@ public class E3_4_CompareValue {
 		// 入力した値を取得するオブジェクトを作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// a の値の入力を促すメッセージを出力
-		System.out.print("整数値 a を入力してください : ");
-		// 変数aに入力された値を保持する
-		int a = stdIn.nextInt();
+		// A の値の入力を促すメッセージを出力する
+		System.out.print("整数値 A を入力してください : ");
+		// 変数inputValueAに入力された値を保持する
+		int inputValueA = stdIn.nextInt();
 		
-		// b の値の入力を促すメッセージを出力
-		System.out.print("整数値 b を入力してください : ");
-		// 変数bに入力された値を保持する
-		int b = stdIn.nextInt();
+		// B の値の入力を促すメッセージを出力する
+		System.out.print("整数値 B を入力してください : ");
+		// 変数inputValueBに入力された値を保持する
+		int inputValueB = stdIn.nextInt();
+		
+		// inputValueAの値がinputValueBの値より大きい場合の処理を行う
+		if( inputValueA > inputValueB ) {
+			// inputValueAの値の方が大きいことをメッセージで出力する
+			System.out.println("Aのほうが大きいです。");
+		// inputValueAの値がinputValueBの値より大きい場合の処理を行う
+		} else if ( inputValueA < inputValueB ) {
+			// inputValueBの値の方が大きいことをメッセージで出力する
+			System.out.println("Bのほうが大きいです。");
+		// inputValueAの値がinputValueBの値と同じ場合の処理を行う
+		} else {
+			// inputValueAの値とinputValueBの値が同じことをメッセージで出力する
+			System.out.println("AとBは同じ値です。");
+		}
 		
 		// 入力用のストリームを閉じる
 		stdIn.close();
 		
-		// aとbの値を比較した結果で出力するメッセージを振り分ける処理
-		if( a > b ) {
-			System.out.println("aのほうが大きいです。");
-		} else if ( a < b ) {
-			System.out.println("bのほうが大きいです。");
-		} else {
-			System.out.println("aとbは同じ値です。");
-		}
 	}
 	
 }
