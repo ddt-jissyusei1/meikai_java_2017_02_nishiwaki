@@ -12,21 +12,32 @@ public class E3_9_ComparisonValue {
 		// 入力された値を取得する為のオブジェクトの作成する
 		Scanner stdIn = new Scanner(System.in);
 		
-		// 実数値の入力を促すメッセージを出力
-		System.out.print("実数値 a を入力してください : ");
-		// 入力された値を取得し変数aに保持する
-		double a = stdIn.nextDouble();
+		// 実数値の入力を促すメッセージを出力する
+		System.out.print("実数値 A を入力してください : ");
+		// 入力された値を取得し変数inputValueAに保持する
+		double inputValueA = stdIn.nextDouble();
 		
-		// 実数値の入力を促すメッセージを出力
-		System.out.print("実数値 b を入力してください : ");
-		// 入力された値を変数bに保持する
-		double b = stdIn.nextDouble();
+		// 実数値の入力を促すメッセージを出力する
+		System.out.print("実数値 B を入力してください : ");
+		// 入力された値を変数inputValueBに保持する
+		double inputValueB = stdIn.nextDouble();
 		
 		// 入力用のストリームを閉じる
 		stdIn.close();
 		
-		// aとbを比較して大きい方の値を出力する
-		System.out.println("大きい方の値は" + ( a > b ? a : b) + "です。");
+		// 入力された値が異なる場合の処理を行う
+		if( inputValueA != inputValueB ) {
+			
+			// inputValueAとinputValueBを比較して大きい方の値を出力する
+			System.out.println("大きい方の値は" + ( inputValueA > inputValueB ? inputValueA : inputValueB) + "です。");
 		
+		// 入力された値が同じだった場合の処理を行う
+		} else {
+			
+			// 入力された値が同じであることをメッセージで出力する
+			System.out.println("AとBの値は同じです。");
+			
+		}
+
 	}
 }
