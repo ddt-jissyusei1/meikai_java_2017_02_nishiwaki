@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class E4_1_RepeatCheckValue {
 
 	// do while文リピートさせるために使用する値を設定する
-	public static final int AGAIN = 1;
+	public static final int REPEAT_AGAIN = 1;
 	
 	// do while文のリピートを終了させるために使用する値を設定する
-	public static final int END = 2;
+	public static final int REPEAT_END = 2;
 
 	// 入力した値の符号のチェックを 好きなだけ繰り返す為の処理を行う
 	public static void main (String[] arg) {
@@ -37,6 +37,9 @@ public class E4_1_RepeatCheckValue {
 				
 				// プログラムを終了するメッセージを表示する
 				System.out.println("プログラムを終了します。");
+				
+				// 入力用ストリームを閉じる
+				standardInput.close();
 				
 				// プログラムを終了する
 				return;
@@ -79,6 +82,9 @@ public class E4_1_RepeatCheckValue {
 					// プログラムを終了するメッセージを表示する
 					System.out.println("プログラムを終了します。");
 					
+					// 入力用ストリームを閉じる
+					standardInput.close();
+					
 					// プログラムを終了する
 					return;
 					
@@ -87,7 +93,7 @@ public class E4_1_RepeatCheckValue {
 				inputCommand = standardInput.nextInt();
 
 				// 想定外の命令が入力された場合の処理を行う
-				if ( inputCommand != AGAIN && inputCommand != END ) {
+				if ( inputCommand != REPEAT_AGAIN && inputCommand != REPEAT_END ) {
 					
 					// 入力が間違えていることをメッセージで出力する
 					System.out.println("入力された値が間違えています。");
@@ -95,15 +101,21 @@ public class E4_1_RepeatCheckValue {
 					// プログラムを終了するメッセージを表示する
 					System.out.println("プログラムを終了します。");
 					
+					// 入力用ストリームを閉じる
+					standardInput.close();
+					
 					// プログラムを終了する
 					return;
 					
 				// 入力された命令が 2 の場合の処理を行う
-				} else if ( inputCommand == END ) {
+				} else if ( inputCommand == REPEAT_END ) {
 
 					// プログラムを終了するメッセージを出力する
 					System.out.println("プログラムを終了します。");
-
+					
+					// 入力用ストリームを閉じる
+					standardInput.close();
+					
 					// プログラムを終了する
 					return;
 					
@@ -112,7 +124,7 @@ public class E4_1_RepeatCheckValue {
 			}
 
 			// 入力された命令が 1 だった場合処理を繰り返す
-		} while ( inputCommand == AGAIN );
+		} while ( inputCommand == REPEAT_AGAIN );
 
 		// 入力用ストリームを閉じる
 		standardInput.close();
