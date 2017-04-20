@@ -4,7 +4,7 @@ package kensyu01;
 import java.util.Scanner;
 
 // while文の動作を検証する為のクラス
-public class ValificationWhileStatement {
+public class E4_4_ValificationWhileStatement {
 
 	// while文が 判定が先, 処理が後 であることを検証する処理を行う
 	public static void main(String[] arg){
